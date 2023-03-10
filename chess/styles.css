@@ -1,0 +1,305 @@
+html{
+   # background-color:#4#bababa;
+}
+
+footer{
+position: absolute;
+bottom:0;
+width:100%;
+display:none;
+}
+
+#Board {
+    user-select:none;
+	position: relative;
+	top: 100px;
+	left: 100px;
+	width: 480px;
+	height: 480px;
+	box-shadow: 0px 0px 5px #343a40;
+
+}
+.fen-wrapper{
+    position: relative;
+    top: 130px;
+	left: 100px;
+    width:480px;
+    display:none;
+}
+#EngineOutput {
+    position: relative;
+	top: 120px;
+	left: 100px;
+    text-align:center;
+    width:480px;
+
+}
+.pieces-edit-map{
+    width:130px;
+    position:relative;
+    top:160px;
+    left:0px;
+    display:none;
+    #opacity:0;
+}
+.game-history{
+display:none;
+    padding: 5px 5px 5px 0;
+    position: absolute;
+	bottom:0px;
+	height:160px;
+	overflow-y:auto;
+	overflow-x:hidden;
+	width:360px;
+	left: 160px;
+    text-align:center;
+    border:1px #c6c7c8 solid;
+    border-radius: 10px 10px 0 0;
+    background-color:#f8f9fa;
+}
+.row{
+    margin:0 !important;
+}
+.game-history .move:hover{
+    background-color:#c6c7c8;
+
+    border-radius: 5px;
+}
+.game-history .num{
+    #background-color:#c6c7c8;
+    #border-radius: 5px;
+}
+#EngineOutput button{
+    display: inline-block !important;
+}
+.Square {
+	position: absolute;	
+	width: 60px;
+	height: 60px;
+}
+
+.Dark {
+	background-color:#B58863;
+}
+
+.Light {
+	background-color:#F0D9B5;
+}
+
+.SqSelected {
+	background-color:#CDD26A;
+}
+
+.rank1 { top: 420px; }
+.rank2 { top: 360px; }
+.rank3 { top: 300px; }
+.rank4 { top: 240px; }
+.rank5 { top: 180px; }
+.rank6 { top: 120px; }
+.rank7 { top: 60px; }
+.rank8 { top: 0px; }
+
+.file1 { left: 0px; }
+.file2 { left: 60px; }
+.file3 { left: 120px; }
+.file4 { left: 180px; }
+.file5 { left: 240px; }
+.file6 { left: 300px; }
+.file7 { left: 360px; }
+.file8 { left: 420px; }
+
+.Piece, .piece-edit, #pieceEditDragged{
+	position: absolute;
+}
+.edit{
+    position:static;
+}
+
+.cletter{
+	font-weight: bold;
+	position: absolute;
+	bottom:1px;
+	left:1px;
+}
+.cletter-light{
+	color:#F0D9B5;
+}
+.cletter-dark{
+	color:#B58863;
+}
+.cnumber{
+	font-weight: bold;
+	position: absolute;
+	right:1px;
+	top:1px;
+}
+.cnumber-light{
+	color:#F0D9B5;
+}
+.cnumber-dark{
+	color:#B58863;
+}
+.whiteChoice, .blackChoice{
+	position: absolute;
+	border: 2px black solid;
+	border-radius: 10px;
+	display: none;
+	z-index: 1002;
+	background-color: gray;
+	opacity: .9;
+}
+.choice-rank-1 img, .choice-rank-2 img{
+}
+.choice-rank-1 img:hover{
+	background-color:#CDD26A;
+	border-radius: 10px;
+}
+.choice-rank-2 img:hover{
+	background-color:#CDD26A;
+	border-radius: 10px;
+}
+.hider{
+	display: none;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	z-index: 1001;
+}
+
+/* The switch - the box around the slider */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 36px;
+  top:-4px;
+}
+.lesson-name{
+    margin-top:60px;
+    margin-left:20px;
+}
+.members{
+    position:relative;
+    top:20px;
+
+
+}
+.members-list{
+    padding:10px;
+    background-color:#f8f9fa;
+    #background-color:#343a40;
+    border-radius:40px;
+    height:80px;
+    text-align: center;
+}
+.members-header{
+    position:relative;
+    top:10px;
+    color:#c6c7c8;
+    font-weight:900;
+    font-size:20px;
+}
+.member-photo{
+    margin-right:5px;
+    width:60px;
+    height:60px;
+    border-radius:30px;
+    float:left;
+}
+/*:root{
+    --light:#d8dbe0;
+    --dark:#28292c;
+}*/
+
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider .ball {
+  position: absolute;
+  content: "";
+  height: 27px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+/*input:checked + .slider {
+  background-color: #d8dbe0;
+}*/
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider .ball {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+  background-color:black;
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round .ball {
+  border-radius: 50%;
+}
+
+@media only screen and (max-width : 1440px) {
+    body {
+        zoom:67%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
